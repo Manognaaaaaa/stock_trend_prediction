@@ -1,0 +1,74 @@
+# Every project setting lives here. Code reads it through src.utils.load_config().
+
+data:
+  start_date: "2008-01-01"   # move to the earliest date Yahoo has
+  end_date: "2025-12-31"     # last day of the study period
+
+tickers:
+  tasi: "^TASI.SR"           # Tadawul All Share Index
+  brent: "BZ=F"              # Brent crude futures
+  vix: "^VIX"                # CBOE volatility index
+  stock_suffix: ".SR"        # Yahoo suffix for Saudi stocks, e.g. 2222.SR
+
+universe:
+  min_history_days: 60          # trading days of history before a stock enters
+  min_days_traded_per_week: 3   # keep a stock in a week only if it traded this many days
+  min_sector_size: 5            # smaller sectors are merged into a broader group
+  price_limit: 0.10             # main market daily limit; +10% close on rebalance day is not buyable
+
+target:
+  horizon_days: 5               # next 5 trading days
+  type: "sector_relative"       # stock return minus mean return of its sector
+
+splits:
+  scheme: "expanding"           # train up to T-2, validate on T-1, test on T
+  embargo_days: 5               # trading days dropped between blocks
+
+portfolio:
+  top_pct: 0.10                 # buy the top 10% by score
+  long_only: true               # short selling is restricted on Tadawul
+  cost_bps_base: 25             # one-way cost: commission plus spread
+  cost_bps_grid: [10, 25, 50]   # cost sensitivity
+
+models:
+  seeds: [0, 1, 2, 3, 4]        # seeds averaged for MLP and MASTER
+  optuna_trials: 40             # LightGBM tuning trials per fold
+
+mlp:
+  hidden: [64, 32]              # 13 -> 64 -> 32 -> 1
+  dropout: 0.25                 # between 0.2 and 0.3
+  weight_decay: 1.0e-4          # Adam weight decay
+
+selector:
+  max_depth: 3                  # kept small: only a few hundred weekly rows
+  num_leaves: 7
+  min_child_samples: 20
+  n_estimators: 100
+  learning_rate: 0.05
+  reg_lambda: 5.0               # strong L2
+
+warning:
+  threshold_pct: 0.20           # main threshold, percentile on past weeks only
+  threshold_grid: [0.10, 0.20, 0.30]   # sensitivity table
+  exposure_levels: [1.0, 0.5, 0.0]     # no signal / one signal / both signals
+
+robustness:
+  liquidity_drop_pct: 0.30      # drop bottom 30% by traded value
+  drop_largest_n: 10            # rerun without the 10 largest companies
+
+regimes:
+  n_components: 3               # GMM: calm, oil stress, panic (reporting only)
+
+# verify exact dates before final results
+crisis_windows:
+  oil_crash: {start: "2014-06-01", end: "2016-02-29"}
+  msci_inclusion: {start: "2019-06-01", end: "2019-09-30"}
+  covid: {start: "2020-02-01", end: "2020-05-31"}
+  rate_hikes: {start: "2022-03-01", end: "2022-12-31"}
+
+paths:
+  raw: "data/raw"               # untouched downloads, git-ignored
+  processed: "data/processed"   # panel, features, targets, git-ignored
+  preds: "results/preds"        # out-of-sample predictions
+  tables: "results/tables"
+  figures: "results/figures"
