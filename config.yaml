@@ -10,6 +10,20 @@ tickers:
   vix: "^VIX"                # CBOE volatility index
   stock_suffix: ".SR"        # Yahoo suffix for Saudi stocks, e.g. 2222.SR
 
+calendar:
+  weekend_change_date: "2013-06-29"  # first day of the Sunday to Thursday week (Sat to Wed before)
+  saudi_tz: "Asia/Riyadh"            # exchange time zone for .SR tickers
+  us_tz: "America/New_York"          # exchange time zone for BZ=F and ^VIX
+  # Yahoo's Saudi stock dates before this day do not line up with TASI (no Saturday
+  # sessions, day offset changes by quarter). Rows before it are kept but flagged
+  # with date_suspect = True; report results with and without them.
+  yahoo_dates_reliable_from: "2013-06-29"
+
+tasi_csv:
+  # Yahoo has no TASI history, so TASI comes from a hand-downloaded Investing.com export
+  pattern: "tasi*.csv"        # files in data/reference/, several parts are joined
+  date_format: "%m/%d/%Y"     # Investing.com English export, e.g. 12/31/2025
+
 download:
   sleep_sec: 0.5              # pause between Yahoo calls
   retries: 3                  # attempts per symbol
@@ -38,6 +52,7 @@ features:
     beta: 120                   # beta to Brent and to TASI
     liquidity: 20               # turnover and Amihud
     vol_chg_long: 60            # vol_chg = mean volume 20 rows / mean volume 60 rows
+  amihud_scale: 1.0e+6          # Amihud uses traded value in millions of SAR
 
 market_features:
   oil_ret_days: 21              # Brent return window, US trading days
