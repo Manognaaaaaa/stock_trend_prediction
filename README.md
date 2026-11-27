@@ -249,7 +249,7 @@ The full plan, with tasks, outputs and checks for each step, is in [`docs/STEPS.
 - [x] Step 6: Selector
 - [x] Step 7: Warning rule
 - [x] Step 8: Evaluation
-- [ ] Step 9: Demo
+- [~] Step 9: Demo
 - [ ] Step 10: Report
 
 ---
