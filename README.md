@@ -245,8 +245,8 @@ The full plan, with tasks, outputs and checks for each step, is in [`docs/STEPS.
 - [x] Step 2: Features, target, folds
 - [x] Step 3: Backtester
 - [x] Step 4: Base models
-- [ ] Step 5: MASTER
-- [ ] Step 6: Selector
+- [~] Step 5: MASTER
+- [x] Step 6: Selector
 - [ ] Step 7: Warning rule
 - [ ] Step 8: Evaluation
 - [ ] Step 9: Demo
