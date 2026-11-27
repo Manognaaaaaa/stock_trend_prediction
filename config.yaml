@@ -73,6 +73,7 @@ portfolio:
   long_only: true               # short selling is restricted on Tadawul
   cost_bps_base: 25             # one-way cost: commission plus spread
   cost_bps_grid: [10, 25, 50]   # cost sensitivity
+  weeks_per_year: 52            # annualisation of weekly returns
 
 models:
   seeds: [0, 1, 2, 3, 4]        # seeds averaged for MLP and MASTER

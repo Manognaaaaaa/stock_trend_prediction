@@ -243,7 +243,7 @@ The full plan, with tasks, outputs and checks for each step, is in [`docs/STEPS.
 - [x] Step 0: Repo, environment, config
 - [x] Step 1: Data
 - [x] Step 2: Features, target, folds
-- [ ] Step 3: Backtester
+- [x] Step 3: Backtester
 - [ ] Step 4: Base models
 - [ ] Step 5: MASTER
 - [ ] Step 6: Selector
