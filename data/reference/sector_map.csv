@@ -1,0 +1,23 @@
+industry_group,broad_group
+Energy,Energy
+Materials,Materials
+Capital Goods,Industrials
+Commercial & Professional Svc,Industrials
+Transportation,Industrials
+Consumer Durables & Apparel,Consumer Discretionary
+Consumer Services,Consumer Discretionary
+Consumer Discretionary Distribution & Retail,Consumer Discretionary
+Media and Entertainment,Communication
+Telecommunication Services,Communication
+Consumer Staples Distribution & Retail,Consumer Staples
+Food & Beverages,Consumer Staples
+Household & Personal Products,Consumer Staples
+Health Care Equipment & Svc,Health Care
+"Pharma, Biotech & Life Science",Health Care
+Banks,Financials
+Financial Services,Financials
+Insurance,Financials
+Real Estate Mgmt & Dev't,Real Estate
+Utilities,Utilities
+Software & Services,Information Technology
+REITs,Real Estate

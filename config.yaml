@@ -10,19 +10,48 @@ tickers:
   vix: "^VIX"                # CBOE volatility index
   stock_suffix: ".SR"        # Yahoo suffix for Saudi stocks, e.g. 2222.SR
 
+download:
+  sleep_sec: 0.5              # pause between Yahoo calls
+  retries: 3                  # attempts per symbol
+
 universe:
   min_history_days: 60          # trading days of history before a stock enters
   min_days_traded_per_week: 3   # keep a stock in a week only if it traded this many days
   min_sector_size: 5            # smaller sectors are merged into a broader group
   price_limit: 0.10             # main market daily limit; +10% close on rebalance day is not buyable
+  exclude_groups: ["REITs"]     # D3: funds, not companies
+  ca_threshold: 0.105           # D9: abs adjusted daily move above this is flagged
+  first_days_no_limit: 3        # IPO days with no price limit
+  limit_up_tolerance: 0.0995    # raw close-to-close move counted as limit up
+
+features:
+  min_coverage: 0.8             # D11: share of a window that must be non-missing
+  windows:                      # in the stock's own trading rows
+    ret_1w: 5
+    ret_1m: 21
+    ret_3m: 63
+    ret_6m: 126
+    ret_12m_total: 252          # 12-month momentum covers rows t-251 to t-21
+    ret_12m_skip: 21            # skip the latest month
+    vol_short: 20
+    vol_long: 60
+    beta: 120                   # beta to Brent and to TASI
+    liquidity: 20               # turnover and Amihud
+    vol_chg_long: 60            # vol_chg = mean volume 20 rows / mean volume 60 rows
+
+market_features:
+  oil_ret_days: 21              # Brent return window, US trading days
+  vol_days: 20                  # Brent and TASI volatility window
+  vix_chg_days: 5               # VIX change lag, US trading days
 
 target:
-  horizon_days: 5               # next 5 trading days
+  horizon: "next_week"          # D8: week_end close to next week_end close
   type: "sector_relative"       # stock return minus mean return of its sector
 
 splits:
   scheme: "expanding"           # train up to T-2, validate on T-1, test on T
-  embargo_days: 5               # trading days dropped between blocks
+  embargo_days: 5               # D14: min trading days between last target end and next block
+  min_train_years: 2            # D15: full years of features before the validation year
 
 portfolio:
   top_pct: 0.10                 # buy the top 10% by score
@@ -72,3 +101,4 @@ paths:
   preds: "results/preds"        # out-of-sample predictions
   tables: "results/tables"
   figures: "results/figures"
+  reference: "data/reference"   # hand-made universe.csv and sector_map.csv, committed

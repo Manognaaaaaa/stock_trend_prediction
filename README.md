@@ -140,14 +140,17 @@ Raw data is **not** committed to the repo. Run the download script to recreate i
 ## Repository structure
 
 ```
-tadawul-ranking/
+stock_trend_prediction/
 ├── README.md
 ├── config.yaml              # every setting: dates, costs, top %, seeds, thresholds
 ├── requirements.txt
 ├── .gitignore
 ├── docs/
-│   └── STEPS.md             # the build plan, step by step
+│   ├── STEPS.md             # the build plan, step by step
+│   └── SPEC_STEPS_0_2.md    # detailed spec for Steps 0 to 2 (wins over STEPS.md)
+├── pytest.ini
 ├── data/
+│   ├── reference/           # hand-made universe.csv and sector_map.csv, committed
 │   ├── raw/                 # downloads, git-ignored
 │   └── processed/           # weekly panel, features, targets, git-ignored
 ├── src/
@@ -187,8 +190,8 @@ tadawul-ranking/
 ## Setup
 
 ```bash
-git clone https://github.com/<your-username>/tadawul-ranking.git
-cd tadawul-ranking
+git clone https://github.com/Manognaaaaaa/stock_trend_prediction.git
+cd stock_trend_prediction
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
