@@ -244,3 +244,21 @@ def test_sector_groups_have_min_size(synthetic, cfg):
     small = sizes.loc[sizes["sector_group"] != "Other", "n"]
     assert (small >= cfg["universe"]["min_sector_size"]).all()
     assert "Other" in set(sizes["sector_group"])  # Energy (2) and Insurance (3) cannot reach 5
+
+
+# ---------------------------------------------------------------- MASTER loader
+
+
+def test_master_dataset_windows():
+    """Each sample is the stock's own last lookback rows with the label in the last column."""
+    from src.models.master_adapter import MasterDataset
+    table = pd.DataFrame({"symbol": ["A"] * 5 + ["B"] * 5,
+                          "date": list(pd.date_range("2020-01-01", periods=5)) * 2,
+                          "f": np.arange(10, dtype=float), "label": np.arange(10, dtype=float) / 10})
+    ds = MasterDataset(table, ["f"], lookback=3, keep=pd.Series(True, index=table.index))
+    assert len(ds) == 6  # rows 3 to 5 of each stock
+    assert ds.get_index().get_level_values("datetime").is_monotonic_increasing
+    first = ds[0]
+    assert first.shape == (3, 2)
+    assert first[:, 0].tolist() in ([0.0, 1.0, 2.0], [5.0, 6.0, 7.0])
+    assert first[-1, -1] == first[-1, 0] / 10
