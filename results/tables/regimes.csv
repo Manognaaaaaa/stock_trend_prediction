@@ -1,0 +1,614 @@
+week_end,regime
+2014-01-02,calm
+2014-01-09,calm
+2014-01-16,calm
+2014-01-23,calm
+2014-01-30,calm
+2014-02-06,calm
+2014-02-13,calm
+2014-02-20,calm
+2014-02-27,calm
+2014-03-06,calm
+2014-03-13,calm
+2014-03-20,calm
+2014-03-27,calm
+2014-04-03,calm
+2014-04-10,calm
+2014-04-17,calm
+2014-04-24,calm
+2014-05-01,calm
+2014-05-08,calm
+2014-05-15,calm
+2014-05-22,calm
+2014-05-29,calm
+2014-06-05,calm
+2014-06-12,calm
+2014-06-19,calm
+2014-06-26,calm
+2014-07-03,calm
+2014-07-10,calm
+2014-07-17,calm
+2014-07-24,calm
+2014-08-07,calm
+2014-08-14,calm
+2014-08-21,calm
+2014-08-28,calm
+2014-09-04,calm
+2014-09-11,calm
+2014-09-18,calm
+2014-09-25,calm
+2014-10-02,calm
+2014-10-16,oil stress
+2014-10-23,oil stress
+2014-10-30,oil stress
+2014-11-06,oil stress
+2014-11-13,oil stress
+2014-11-20,oil stress
+2014-11-27,oil stress
+2014-12-04,oil stress
+2014-12-11,oil stress
+2014-12-18,panic
+2014-12-25,panic
+2015-01-01,panic
+2015-01-08,panic
+2015-01-15,oil stress
+2015-01-22,oil stress
+2015-01-29,oil stress
+2015-02-05,oil stress
+2015-02-12,oil stress
+2015-02-19,oil stress
+2015-02-26,oil stress
+2015-03-05,oil stress
+2015-03-12,oil stress
+2015-03-19,calm
+2015-03-26,oil stress
+2015-04-02,oil stress
+2015-04-09,oil stress
+2015-04-16,oil stress
+2015-04-23,oil stress
+2015-04-30,oil stress
+2015-05-07,calm
+2015-05-14,calm
+2015-05-21,calm
+2015-05-28,calm
+2015-06-04,calm
+2015-06-11,calm
+2015-06-18,calm
+2015-06-25,calm
+2015-07-02,calm
+2015-07-09,oil stress
+2015-07-15,calm
+2015-07-23,calm
+2015-07-30,calm
+2015-08-06,oil stress
+2015-08-13,oil stress
+2015-08-20,oil stress
+2015-08-27,panic
+2015-09-03,panic
+2015-09-10,panic
+2015-09-17,panic
+2015-09-21,panic
+2015-10-01,oil stress
+2015-10-08,oil stress
+2015-10-15,oil stress
+2015-10-22,oil stress
+2015-10-29,oil stress
+2015-11-05,oil stress
+2015-11-12,oil stress
+2015-11-19,oil stress
+2015-11-26,oil stress
+2015-12-03,oil stress
+2015-12-10,oil stress
+2015-12-17,oil stress
+2015-12-24,oil stress
+2015-12-31,oil stress
+2016-01-07,oil stress
+2016-01-14,oil stress
+2016-01-21,panic
+2016-01-28,panic
+2016-02-04,panic
+2016-02-11,panic
+2016-02-18,oil stress
+2016-02-25,oil stress
+2016-03-03,oil stress
+2016-03-10,oil stress
+2016-03-17,oil stress
+2016-03-24,oil stress
+2016-03-31,oil stress
+2016-04-07,calm
+2016-04-14,oil stress
+2016-04-21,oil stress
+2016-04-28,oil stress
+2016-05-05,oil stress
+2016-05-12,oil stress
+2016-05-19,oil stress
+2016-05-26,calm
+2016-06-02,calm
+2016-06-09,calm
+2016-06-16,oil stress
+2016-06-23,calm
+2016-06-30,calm
+2016-07-14,oil stress
+2016-07-21,oil stress
+2016-07-28,calm
+2016-08-04,calm
+2016-08-11,calm
+2016-08-18,calm
+2016-08-25,calm
+2016-09-01,calm
+2016-09-08,calm
+2016-09-21,oil stress
+2016-09-29,oil stress
+2016-10-06,oil stress
+2016-10-13,oil stress
+2016-10-20,oil stress
+2016-10-27,oil stress
+2016-11-03,oil stress
+2016-11-10,oil stress
+2016-11-17,oil stress
+2016-11-24,oil stress
+2016-12-01,oil stress
+2016-12-08,oil stress
+2016-12-15,oil stress
+2016-12-22,oil stress
+2016-12-29,oil stress
+2017-01-05,calm
+2017-01-12,calm
+2017-01-19,calm
+2017-01-26,calm
+2017-02-02,calm
+2017-02-09,calm
+2017-02-16,calm
+2017-02-23,calm
+2017-03-02,calm
+2017-03-09,calm
+2017-03-16,calm
+2017-03-23,calm
+2017-03-30,calm
+2017-04-06,calm
+2017-04-13,calm
+2017-04-20,calm
+2017-04-27,calm
+2017-05-04,calm
+2017-05-11,calm
+2017-05-18,calm
+2017-05-25,calm
+2017-06-01,calm
+2017-06-08,calm
+2017-06-15,calm
+2017-06-22,oil stress
+2017-07-06,oil stress
+2017-07-13,oil stress
+2017-07-20,oil stress
+2017-07-27,calm
+2017-08-03,calm
+2017-08-10,calm
+2017-08-17,calm
+2017-08-24,calm
+2017-08-29,calm
+2017-09-07,calm
+2017-09-14,calm
+2017-09-21,calm
+2017-09-28,calm
+2017-10-05,calm
+2017-10-12,calm
+2017-10-19,calm
+2017-10-26,calm
+2017-11-02,calm
+2017-11-09,calm
+2017-11-16,calm
+2017-11-23,calm
+2017-11-30,calm
+2017-12-07,calm
+2017-12-14,calm
+2017-12-21,calm
+2017-12-28,calm
+2018-01-04,calm
+2018-01-11,calm
+2018-01-18,calm
+2018-01-25,calm
+2018-02-01,calm
+2018-02-08,oil stress
+2018-02-15,calm
+2018-02-22,calm
+2018-03-01,calm
+2018-03-08,calm
+2018-03-15,calm
+2018-03-22,calm
+2018-03-29,calm
+2018-04-05,calm
+2018-04-12,calm
+2018-04-19,calm
+2018-04-26,calm
+2018-05-03,calm
+2018-05-10,calm
+2018-05-17,calm
+2018-05-24,calm
+2018-05-31,calm
+2018-06-07,calm
+2018-06-12,calm
+2018-06-21,calm
+2018-06-28,calm
+2018-07-05,calm
+2018-07-12,calm
+2018-07-19,calm
+2018-07-26,calm
+2018-08-02,calm
+2018-08-09,calm
+2018-08-16,calm
+2018-08-30,calm
+2018-09-06,calm
+2018-09-13,calm
+2018-09-20,calm
+2018-09-27,calm
+2018-10-04,calm
+2018-10-11,oil stress
+2018-10-18,oil stress
+2018-10-25,oil stress
+2018-11-01,oil stress
+2018-11-08,oil stress
+2018-11-15,oil stress
+2018-11-22,oil stress
+2018-11-29,oil stress
+2018-12-06,oil stress
+2018-12-13,oil stress
+2018-12-20,oil stress
+2018-12-27,oil stress
+2019-01-03,oil stress
+2019-01-10,oil stress
+2019-01-17,oil stress
+2019-01-24,oil stress
+2019-01-31,calm
+2019-02-07,calm
+2019-02-14,calm
+2019-02-21,calm
+2019-02-28,calm
+2019-03-07,calm
+2019-03-14,calm
+2019-03-21,calm
+2019-03-28,calm
+2019-04-04,calm
+2019-04-11,calm
+2019-04-18,calm
+2019-04-25,calm
+2019-05-02,calm
+2019-05-09,calm
+2019-05-16,oil stress
+2019-05-23,oil stress
+2019-05-30,oil stress
+2019-06-13,oil stress
+2019-06-20,oil stress
+2019-06-27,oil stress
+2019-07-04,calm
+2019-07-11,calm
+2019-07-18,calm
+2019-07-25,calm
+2019-08-01,calm
+2019-08-08,calm
+2019-08-22,calm
+2019-08-29,oil stress
+2019-09-05,calm
+2019-09-12,calm
+2019-09-19,oil stress
+2019-09-26,oil stress
+2019-10-03,oil stress
+2019-10-10,oil stress
+2019-10-17,calm
+2019-10-24,calm
+2019-10-31,calm
+2019-11-07,calm
+2019-11-14,calm
+2019-11-21,calm
+2019-11-28,calm
+2019-12-05,calm
+2019-12-12,calm
+2019-12-19,calm
+2019-12-26,calm
+2020-01-02,calm
+2020-01-09,calm
+2020-01-16,calm
+2020-01-23,calm
+2020-01-30,oil stress
+2020-02-06,oil stress
+2020-02-13,calm
+2020-02-20,calm
+2020-02-27,oil stress
+2020-03-05,oil stress
+2020-03-12,panic
+2020-03-19,panic
+2020-03-26,panic
+2020-04-02,panic
+2020-04-09,panic
+2020-04-16,panic
+2020-04-23,panic
+2020-04-30,panic
+2020-05-07,panic
+2020-05-14,panic
+2020-05-21,oil stress
+2020-06-04,oil stress
+2020-06-11,oil stress
+2020-06-18,oil stress
+2020-06-25,oil stress
+2020-07-02,oil stress
+2020-07-09,oil stress
+2020-07-16,oil stress
+2020-07-23,calm
+2020-07-28,calm
+2020-08-06,calm
+2020-08-13,calm
+2020-08-20,calm
+2020-08-27,calm
+2020-09-03,calm
+2020-09-10,oil stress
+2020-09-17,oil stress
+2020-09-24,oil stress
+2020-10-01,oil stress
+2020-10-08,oil stress
+2020-10-15,oil stress
+2020-10-22,oil stress
+2020-10-29,oil stress
+2020-11-05,oil stress
+2020-11-12,oil stress
+2020-11-19,oil stress
+2020-11-26,oil stress
+2020-12-03,oil stress
+2020-12-10,calm
+2020-12-17,calm
+2020-12-24,calm
+2020-12-31,calm
+2021-01-07,calm
+2021-01-14,calm
+2021-01-21,calm
+2021-01-28,oil stress
+2021-02-04,calm
+2021-02-11,calm
+2021-02-18,calm
+2021-02-25,calm
+2021-03-04,calm
+2021-03-11,calm
+2021-03-18,calm
+2021-03-25,oil stress
+2021-04-01,oil stress
+2021-04-08,oil stress
+2021-04-15,oil stress
+2021-04-22,calm
+2021-04-29,calm
+2021-05-06,calm
+2021-05-10,calm
+2021-05-20,calm
+2021-05-27,calm
+2021-06-03,calm
+2021-06-10,calm
+2021-06-17,calm
+2021-06-24,calm
+2021-07-01,calm
+2021-07-08,calm
+2021-07-15,calm
+2021-07-29,calm
+2021-08-05,calm
+2021-08-12,calm
+2021-08-19,calm
+2021-08-26,calm
+2021-09-02,calm
+2021-09-09,calm
+2021-09-16,calm
+2021-09-22,calm
+2021-09-30,calm
+2021-10-07,calm
+2021-10-14,calm
+2021-10-21,calm
+2021-10-28,calm
+2021-11-04,calm
+2021-11-11,calm
+2021-11-18,calm
+2021-11-25,calm
+2021-12-02,oil stress
+2021-12-09,oil stress
+2021-12-16,oil stress
+2021-12-23,oil stress
+2021-12-30,calm
+2022-01-06,calm
+2022-01-13,calm
+2022-01-20,calm
+2022-01-27,oil stress
+2022-02-03,calm
+2022-02-10,calm
+2022-02-17,calm
+2022-02-24,oil stress
+2022-03-03,oil stress
+2022-03-10,oil stress
+2022-03-17,oil stress
+2022-03-24,oil stress
+2022-03-31,oil stress
+2022-04-07,oil stress
+2022-04-14,oil stress
+2022-04-21,oil stress
+2022-04-28,oil stress
+2022-05-12,oil stress
+2022-05-19,oil stress
+2022-05-26,oil stress
+2022-06-02,oil stress
+2022-06-09,oil stress
+2022-06-16,oil stress
+2022-06-23,oil stress
+2022-06-30,oil stress
+2022-07-06,oil stress
+2022-07-14,oil stress
+2022-07-21,oil stress
+2022-07-28,oil stress
+2022-08-04,oil stress
+2022-08-11,oil stress
+2022-08-18,oil stress
+2022-08-25,oil stress
+2022-09-01,oil stress
+2022-09-08,oil stress
+2022-09-15,oil stress
+2022-09-21,oil stress
+2022-09-29,oil stress
+2022-10-06,oil stress
+2022-10-13,oil stress
+2022-10-20,oil stress
+2022-10-27,oil stress
+2022-11-03,oil stress
+2022-11-10,oil stress
+2022-11-17,calm
+2022-11-24,calm
+2022-12-01,calm
+2022-12-08,oil stress
+2022-12-15,oil stress
+2022-12-22,oil stress
+2022-12-29,oil stress
+2023-01-05,oil stress
+2023-01-12,oil stress
+2023-01-19,calm
+2023-01-26,calm
+2023-02-02,calm
+2023-02-09,calm
+2023-02-16,calm
+2023-02-23,calm
+2023-03-02,calm
+2023-03-09,calm
+2023-03-16,oil stress
+2023-03-23,oil stress
+2023-03-30,calm
+2023-04-06,calm
+2023-04-13,calm
+2023-04-17,calm
+2023-04-27,calm
+2023-05-04,calm
+2023-05-11,calm
+2023-05-18,calm
+2023-05-25,calm
+2023-06-01,calm
+2023-06-08,calm
+2023-06-15,calm
+2023-06-22,calm
+2023-07-06,calm
+2023-07-13,calm
+2023-07-20,calm
+2023-07-27,calm
+2023-08-03,calm
+2023-08-10,calm
+2023-08-17,calm
+2023-08-24,calm
+2023-08-31,calm
+2023-09-07,calm
+2023-09-14,calm
+2023-09-21,calm
+2023-09-28,calm
+2023-10-05,calm
+2023-10-12,calm
+2023-10-19,calm
+2023-10-26,calm
+2023-11-02,calm
+2023-11-09,calm
+2023-11-16,calm
+2023-11-23,calm
+2023-11-30,calm
+2023-12-07,calm
+2023-12-14,calm
+2023-12-21,calm
+2023-12-28,calm
+2024-01-04,calm
+2024-01-11,calm
+2024-01-18,calm
+2024-01-25,calm
+2024-02-01,calm
+2024-02-08,calm
+2024-02-15,calm
+2024-02-21,calm
+2024-02-29,calm
+2024-03-07,calm
+2024-03-14,calm
+2024-03-21,calm
+2024-03-28,calm
+2024-04-04,calm
+2024-04-18,calm
+2024-04-25,calm
+2024-05-02,calm
+2024-05-09,calm
+2024-05-16,calm
+2024-05-23,calm
+2024-05-30,calm
+2024-06-06,calm
+2024-06-13,calm
+2024-06-27,calm
+2024-07-04,calm
+2024-07-11,calm
+2024-07-18,calm
+2024-07-25,calm
+2024-08-01,calm
+2024-08-08,oil stress
+2024-08-15,calm
+2024-08-22,calm
+2024-08-29,calm
+2024-09-05,calm
+2024-09-12,calm
+2024-09-19,calm
+2024-09-26,calm
+2024-10-03,calm
+2024-10-10,calm
+2024-10-17,calm
+2024-10-24,calm
+2024-10-31,oil stress
+2024-11-07,calm
+2024-11-14,calm
+2024-11-21,calm
+2024-11-28,calm
+2024-12-05,calm
+2024-12-12,calm
+2024-12-19,oil stress
+2024-12-26,calm
+2025-01-02,calm
+2025-01-09,calm
+2025-01-16,calm
+2025-01-23,calm
+2025-01-30,calm
+2025-02-06,calm
+2025-02-13,calm
+2025-02-20,calm
+2025-02-27,calm
+2025-03-06,calm
+2025-03-13,calm
+2025-03-20,calm
+2025-03-27,calm
+2025-04-03,calm
+2025-04-10,oil stress
+2025-04-17,oil stress
+2025-04-24,oil stress
+2025-05-01,oil stress
+2025-05-08,calm
+2025-05-15,calm
+2025-05-22,calm
+2025-05-29,calm
+2025-06-04,calm
+2025-06-12,calm
+2025-06-19,oil stress
+2025-06-26,oil stress
+2025-07-03,oil stress
+2025-07-10,oil stress
+2025-07-17,calm
+2025-07-24,calm
+2025-07-31,calm
+2025-08-07,calm
+2025-08-14,calm
+2025-08-21,calm
+2025-08-28,calm
+2025-09-04,calm
+2025-09-11,calm
+2025-09-18,calm
+2025-09-25,oil stress
+2025-10-02,oil stress
+2025-10-09,oil stress
+2025-10-16,oil stress
+2025-10-23,calm
+2025-10-30,calm
+2025-11-06,calm
+2025-11-13,calm
+2025-11-20,calm
+2025-11-27,calm
+2025-12-04,calm
+2025-12-11,calm
+2025-12-18,calm
+2025-12-25,calm
+2025-12-31,calm

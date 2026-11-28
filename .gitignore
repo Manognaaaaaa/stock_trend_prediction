@@ -29,3 +29,6 @@ Thumbs.db
 # Claude Code local files
 .claude/settings.local.json
 .claude/worktrees/
+
+# Cloned third-party code (MASTER)
+external/

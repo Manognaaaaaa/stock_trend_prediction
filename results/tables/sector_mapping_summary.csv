@@ -1,0 +1,22 @@
+industry_group,other,own,pooled,weeks
+Banks,0.0,0.994,0.006,771
+Capital Goods,0.005,0.992,0.003,772
+Commercial & Professional Svc,0.306,0.151,0.542,767
+Consumer Discretionary Distribution & Retail,0.004,0.994,0.003,771
+Consumer Durables & Apparel,0.616,0.384,0.0,766
+Consumer Services,0.005,0.992,0.003,772
+Consumer Staples Distribution & Retail,0.754,0.246,0.0,769
+Energy,0.813,0.187,0.0,769
+Financial Services,0.752,0.248,0.0,766
+Food & Beverages,0.004,0.996,0.0,771
+Health Care Equipment & Svc,0.198,0.719,0.082,776
+Household & Personal Products,1.0,0.0,0.0,51
+Insurance,0.0,0.994,0.006,771
+Materials,0.005,0.995,0.0,772
+Media and Entertainment,0.0,0.0,1.0,766
+"Pharma, Biotech & Life Science",0.917,0.0,0.083,768
+Real Estate Mgmt & Dev't,0.003,0.997,0.0,770
+Software & Services,0.452,0.548,0.0,323
+Telecommunication Services,0.005,0.0,0.995,770
+Transportation,0.164,0.293,0.543,768
+Utilities,0.816,0.184,0.0,768

@@ -10,6 +10,20 @@ tickers:
   vix: "^VIX"                # CBOE volatility index
   stock_suffix: ".SR"        # Yahoo suffix for Saudi stocks, e.g. 2222.SR
 
+calendar:
+  weekend_change_date: "2013-06-29"  # first day of the Sunday to Thursday week (Sat to Wed before)
+  saudi_tz: "Asia/Riyadh"            # exchange time zone for .SR tickers
+  us_tz: "America/New_York"          # exchange time zone for BZ=F and ^VIX
+  # Yahoo's Saudi stock dates before this day do not line up with TASI (no Saturday
+  # sessions, day offset changes by quarter). Rows before it are kept but flagged
+  # with date_suspect = True; report results with and without them.
+  yahoo_dates_reliable_from: "2013-06-29"
+
+tasi_csv:
+  # Yahoo has no TASI history, so TASI comes from a hand-downloaded Investing.com export
+  pattern: "tasi*.csv"        # files in data/reference/, several parts are joined
+  date_format: "%m/%d/%Y"     # Investing.com English export, e.g. 12/31/2025
+
 download:
   sleep_sec: 0.5              # pause between Yahoo calls
   retries: 3                  # attempts per symbol
@@ -38,6 +52,7 @@ features:
     beta: 120                   # beta to Brent and to TASI
     liquidity: 20               # turnover and Amihud
     vol_chg_long: 60            # vol_chg = mean volume 20 rows / mean volume 60 rows
+  amihud_scale: 1.0e+6          # Amihud uses traded value in millions of SAR
 
 market_features:
   oil_ret_days: 21              # Brent return window, US trading days
@@ -58,15 +73,48 @@ portfolio:
   long_only: true               # short selling is restricted on Tadawul
   cost_bps_base: 25             # one-way cost: commission plus spread
   cost_bps_grid: [10, 25, 50]   # cost sensitivity
+  weeks_per_year: 52            # annualisation of weekly returns
 
 models:
   seeds: [0, 1, 2, 3, 4]        # seeds averaged for MLP and MASTER
   optuna_trials: 40             # LightGBM tuning trials per fold
 
+ridge:
+  alpha_log10_grid: [-3, 3, 13] # alphas = logspace(-3, 3, 13), picked on validation Rank IC
+
+lgbm:
+  max_trees: 1000               # upper bound; early stopping on the validation year picks the count
+  early_stopping: 50            # rounds without validation improvement
+  search:                       # Optuna ranges (STEPS.md Step 4)
+    num_leaves: [8, 64]
+    learning_rate: [0.01, 0.1]
+    min_child_samples: [50, 500]
+    feature_fraction: [0.5, 1.0]
+    lambda_l2: [1.0e-3, 10.0]   # log scale
+
 mlp:
   hidden: [64, 32]              # 13 -> 64 -> 32 -> 1
   dropout: 0.25                 # between 0.2 and 0.3
   weight_decay: 1.0e-4          # Adam weight decay
+  lr: 1.0e-3                    # Adam learning rate
+  batch_size: 1024
+  max_epochs: 50
+  patience: 5                   # epochs without validation Rank IC improvement
+
+master:
+  # Settings for the official MASTER code (check against its main.py before training)
+  repo_dir: "external/MASTER"   # clone https://github.com/SJTU-DMTai/MASTER here (git-ignored)
+  lookback: 8                   # days of history per sample
+  label_days: 5                 # next-5-day sector-relative return, z-scored per day
+  market_windows: [5, 10, 20, 30, 60]
+  d_model: 256
+  t_nhead: 4
+  s_nhead: 2
+  dropout: 0.5
+  beta: 5
+  n_epochs: 40
+  lr: 1.0e-5
+  train_stop_loss_thred: 0.95
 
 selector:
   max_depth: 3                  # kept small: only a few hundred weekly rows
@@ -75,15 +123,26 @@ selector:
   n_estimators: 100
   learning_rate: 0.05
   reg_lambda: 5.0               # strong L2
+  ic_windows: [4, 12]           # past-IC inputs, lagged one week
+  min_train_weeks: 52           # fewer past selector rows -> equal weights that year
+  logit_C: 1.0                  # multinomial logistic regression check
 
 warning:
   threshold_pct: 0.20           # main threshold, percentile on past weeks only
   threshold_grid: [0.10, 0.20, 0.30]   # sensitivity table
   exposure_levels: [1.0, 0.5, 0.0]     # no signal / one signal / both signals
+  min_history_weeks: 26         # past weeks needed before a threshold exists
 
 robustness:
   liquidity_drop_pct: 0.30      # drop bottom 30% by traded value
   drop_largest_n: 10            # rerun without the 10 largest companies
+
+evaluation:
+  dm_lags: 4                    # Newey-West lags for the Diebold-Mariano test
+  block_length: 8               # weeks per block in the Sharpe bootstrap
+  bootstrap_draws: 5000
+  ci: 0.95
+  seed: 0
 
 regimes:
   n_components: 3               # GMM: calm, oil stress, panic (reporting only)

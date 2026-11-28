@@ -14,6 +14,6 @@ jobs:
           python-version: "3.12"
       # Light install: skip torch and the other heavy packages to keep CI fast.
       - name: Install test dependencies
-        run: pip install pandas numpy pyarrow pyyaml scikit-learn lightgbm scipy pytest
+        run: pip install pandas numpy pyarrow pyyaml yfinance scikit-learn lightgbm scipy statsmodels arch matplotlib pytest
       - name: Run tests
         run: pytest
